@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microcosm.Atoms;
 
-namespace OOP_BinarySerialization
+namespace Microcosm
 {
-    class AtomCreator<T> : IAtomCreator where T : Atom, new()
+    public class MicrocosmCreator<T> : IMicrocosmCreator where T : IMicrocosm, new()
     {
-        public Atom Create()
+        public IMicrocosm Create()
         {
             return new T();
         }

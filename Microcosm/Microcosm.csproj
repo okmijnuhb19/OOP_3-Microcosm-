@@ -40,20 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AtomCreator.cs" />
-    <Compile Include="AtomFactory.cs" />
-    <Compile Include="Atoms\Al.cs" />
-    <Compile Include="Atoms\Hydrogen.cs" />
-    <Compile Include="Atoms\Li.cs" />
-    <Compile Include="Atoms\Mg.cs" />
-    <Compile Include="Atoms\Na.cs" />
+    <Compile Include="MicrocosmCreator.cs" />
+    <Compile Include="MicrocosmFactory.cs" />
     <Compile Include="Atoms\Nucleus.cs" />
     <Compile Include="ElementaryParticles\Electron.cs" />
     <Compile Include="Atoms\Atom.cs" />
     <Compile Include="ElementaryParticles\ElementaryParticle.cs" />
     <Compile Include="ElementaryParticles\Neutron.cs" />
     <Compile Include="GraphicVisitor.cs" />
-    <Compile Include="IAtomCreator.cs" />
+    <Compile Include="IMicrocosmCreator.cs" />
     <Compile Include="IMicrocosm.cs" />
     <Compile Include="IVisitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

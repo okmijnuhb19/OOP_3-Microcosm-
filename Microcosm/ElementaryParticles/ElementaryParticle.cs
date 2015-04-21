@@ -16,5 +16,21 @@ namespace Microcosm.ElementaryParticles
         public double Mass { get { return mass; } }
         public double E { get { return e; } }
         public double Spin { get { return spin; } }
+
+
+        public void Add(IMicrocosm ep)
+        {
+            throw new NotImplementedException("Elementary particle can't contain elements");
+        }
+
+        public void Remove(IMicrocosm ep)
+        {
+            throw new NotImplementedException("Elementary particle can't contain elements");
+        }
+
+        public System.Collections.IEnumerator GetEnumerator()
+        {
+            yield return this;
+        }
     }
 }

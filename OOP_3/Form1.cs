@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microcosm;
+using Microcosm.Atoms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +19,9 @@ namespace OOP_3
         {
             InitializeComponent();
 
-            //BinaryFormatter bf = new BinaryFormatter();
-            
+            BinaryFormatter bf = new BinaryFormatter();
+
+            MicrocosmFactory mf = new MicrocosmFactory();
         }
     }
 }

@@ -4,41 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microcosm.ElementaryParticles;
+using System.Collections;
 
 namespace Microcosm.Atoms
 {
     [Serializable]
     public class Nucleus : IMicrocosm
     {
-        private List<Proton> protons;
-        private List<Neutron> neutrons;
-
         public double Mass { get { return GetMass(); } }
 
-        public Nucleus(int protons, int neutrons)
-        {
-            InsertProtons(protons);
-            InsertNeutrons(neutrons);
-        }
+        private List<IMicrocosm> particles;
 
-        private void InsertProtons(int count)
+        public Nucleus()
         {
-            protons = new List<Proton>();
-            for (var i = 0; i < count; i++)
-                protons.Add(new Proton());
-        }
-
-        private void InsertNeutrons(int count)
-        {
-            neutrons = new List<Neutron>();
-            for (var i = 0; i < count; i++)
-                neutrons.Add(new Neutron());
+            particles = new List<IMicrocosm>();
         }
 
         private double GetMass()
         {
-            return protons.Select((Proton x) => x.Mass).Sum()
-                + neutrons.Select((Neutron x) => x.Mass).Sum();
+            return particles.Select(x => x.Mass).Sum();
+        }
+
+
+
+        public void Add(IMicrocosm ep)
+        {
+            particles.Add(ep);
+        }
+
+        public void Remove(IMicrocosm ep)
+        {
+            particles.Remove(ep);
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return particles.GetEnumerator();
         }
     }
 }

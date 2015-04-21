@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microcosm.Atoms
+namespace Microcosm
 {
-    [Serializable]
-    public class Mg : Atom
+    public interface IMicrocosmCreator
     {
-        public Mg()
-            : base(12, 12, 12) { }
+        IMicrocosm Create();
     }
 }

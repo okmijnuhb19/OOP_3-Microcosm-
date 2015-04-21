@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microcosm.ElementaryParticles;
+using System.Collections;
 
 namespace Microcosm.Atoms
 {
@@ -12,30 +13,33 @@ namespace Microcosm.Atoms
     {
         public double Mass { get { return GetMass(); } }
 
-        private List<Electron> electrons;
-        private Nucleus nucleus;
+        private List<IMicrocosm> particles;
 
-        public Atom(int electrons, int protons, int neutrons)
+        public Atom()
         {
-            InsertElectrons(electrons);
-            CreateNucleus(protons, neutrons);
-        }
-
-        private void InsertElectrons(int count)
-        {
-            electrons = new List<Electron>();
-            for (var i = 0; i < count; i++)
-                electrons.Add(new Electron());
-        }
-
-        private void CreateNucleus(int protons, int neutrons)
-        {
-            nucleus = new Nucleus(protons, neutrons);
+            particles = new List<IMicrocosm>();
         }
 
         private double GetMass()
         {
-            return nucleus.Mass;
+            return particles.Select(x => x.Mass).Sum();
+        }
+
+
+
+        public void Add(IMicrocosm ep)
+        {
+            particles.Add(ep);
+        }
+
+        public void Remove(IMicrocosm ep)
+        {
+            particles.Remove(ep);
+        }
+
+        public IEnumerator<IMicrocosm> GetEnumerator()
+        {
+            return particles.GetEnumerator();
         }
     }
 }

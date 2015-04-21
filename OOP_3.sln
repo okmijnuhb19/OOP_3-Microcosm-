@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_3", "OOP_3\OOP_3.csproj", "{5BA1D837-3D2A-495A-AF5A-1122DE3B0901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcosm", "..\OOP_BinarySerialization\Microcosm\Microcosm.csproj", "{9FCF602B-6F2E-42D0-88D6-77A2ABB18F50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microcosm", "Microcosm\Microcosm.csproj", "{9FCF602B-6F2E-42D0-88D6-77A2ABB18F50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
