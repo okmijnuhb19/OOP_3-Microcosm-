@@ -15,5 +15,10 @@ namespace Microcosm.ElementaryParticles
             e = 1;
             spin = 0.5;
         }
+
+        public override void Access(IVisitor visitor)
+        {
+            visitor.VisitProton(this);
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Microcosm
 {
-    interface IVisitor
+    public interface IVisitor
     {
         void VisitAtom(Atom atom);
         void VisitNucleus(Nucleus nucleus);

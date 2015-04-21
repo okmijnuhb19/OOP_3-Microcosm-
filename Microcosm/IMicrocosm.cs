@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Microcosm
 {
-    interface IMicrocosm : IEnumerable
+    public interface IMicrocosm : IEnumerable
     {
         double Mass { get; }
 
-        void Add(IMicrocosm ep);
+        void Add(IMicrocosm particular);
 
-        void Remove(IMicrocosm ep);
+        void Remove(IMicrocosm particular);
 
-        IEnumerator GetEnumerator();
+        void Access(IVisitor visitor);
     }
 }

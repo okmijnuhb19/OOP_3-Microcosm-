@@ -4,42 +4,67 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Microcosm
 {
-    class GraphicVisitor: IVisitor
+    public class GraphicVisitor: IVisitor
     {
-        private Graphics g;
+        private MicrocosmNode treeNode;
 
-        public GraphicVisitor(Graphics g)
+        public GraphicVisitor(MicrocosmNode treeNode)
         {
-            this.g = g;
+            this.treeNode = treeNode;
         }
 
         public void VisitAtom(Atoms.Atom atom)
         {
-            throw new NotImplementedException();
+            treeNode.MicrocosElement = atom;
+            treeNode.Text = "Atom";
+
+            MicrocosmNode atomNode = treeNode;
+            foreach (IMicrocosm m in atom)
+            {
+                treeNode = new MicrocosmNode();
+                treeNode.MicrocosParent = atom;
+                m.Access(this);
+                atomNode.Nodes.Add(treeNode);
+            }
+            treeNode = atomNode;
         }
 
         public void VisitNucleus(Atoms.Nucleus nucleus)
         {
-            throw new NotImplementedException();
+            treeNode.MicrocosElement = nucleus;
+            treeNode.Text = "Nucleus";
+
+            MicrocosmNode nucleusNode = treeNode;
+            foreach (IMicrocosm m in nucleus)
+            {
+                treeNode = new MicrocosmNode();
+                treeNode.MicrocosParent = nucleus;
+                m.Access(this);
+                nucleusNode.Nodes.Add(treeNode);
+            }
+            treeNode = nucleusNode;
         }
 
         public void VisitNeutron(ElementaryParticles.Neutron neutron)
         {
-            throw new NotImplementedException();
+            treeNode.MicrocosElement = neutron;
+            treeNode.Text = "neutron";
         }
 
         public void VisitProton(ElementaryParticles.Proton proton)
         {
-            throw new NotImplementedException();
+            treeNode.MicrocosElement = proton;
+            treeNode.Text = "proton";
         }
 
         public void VisitElectron(ElementaryParticles.Electron electron)
         {
-            //Pen p = new Pen(Color.Blue);o
-            //g.DrawEllipse(p, )
+            treeNode.MicrocosElement = electron;
+            treeNode.Text = "electron";
         }
     }
 }

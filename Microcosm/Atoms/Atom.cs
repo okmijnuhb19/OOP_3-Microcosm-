@@ -27,19 +27,25 @@ namespace Microcosm.Atoms
 
 
 
-        public void Add(IMicrocosm ep)
+        public void Add(IMicrocosm particular)
         {
-            particles.Add(ep);
+            particles.Add(particular);
         }
 
-        public void Remove(IMicrocosm ep)
+        public void Remove(IMicrocosm particular)
         {
-            particles.Remove(ep);
+            particles.Remove(particular);
         }
 
-        public IEnumerator<IMicrocosm> GetEnumerator()
+        public IEnumerator GetEnumerator()
         {
             return particles.GetEnumerator();
+        }
+
+
+        public void Access(IVisitor visitor)
+        {
+            visitor.VisitAtom(this);
         }
     }
 }

@@ -18,12 +18,12 @@ namespace Microcosm.ElementaryParticles
         public double Spin { get { return spin; } }
 
 
-        public void Add(IMicrocosm ep)
+        public void Add(IMicrocosm particular)
         {
             throw new NotImplementedException("Elementary particle can't contain elements");
         }
 
-        public void Remove(IMicrocosm ep)
+        public void Remove(IMicrocosm particular)
         {
             throw new NotImplementedException("Elementary particle can't contain elements");
         }
@@ -32,5 +32,8 @@ namespace Microcosm.ElementaryParticles
         {
             yield return this;
         }
+
+
+        public virtual void Access(IVisitor visitor) { }
     }
 }
