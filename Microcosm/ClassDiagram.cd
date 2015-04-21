@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microcosm.ElementaryParticles.Electron" Collapsed="true">
+    <Position X="9.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ElementaryParticles\Electron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.ElementaryParticles.Neutron" Collapsed="true">
+    <Position X="11.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ElementaryParticles\Neutron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.ElementaryParticles.Proton" Collapsed="true">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ElementaryParticles\Proton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.Atoms.Nucleus" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQIAAAAAAAAAAAAAEBAAAAAAAAAAEAACAAAA=</HashCode>
+      <FileName>Atoms\Nucleus.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microcosm.Atoms.Atom">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAIAIAAAAAAAAAAAAIAAAAAAAAAAgAACAAAA=</HashCode>
+      <FileName>Atoms\Atom.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Microcosm.Atoms.Li" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Atoms\Li.cs</FileName>
+      <NewMemberFileName>Atoms\Hydrogen.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.Atoms.Mg" Collapsed="true">
+    <Position X="1.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Atoms\Mg.cs</FileName>
+      <NewMemberFileName>Atoms\Hydrogen.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.Atoms.Na" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Atoms\Na.cs</FileName>
+      <NewMemberFileName>Atoms\Hydrogen.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.Atoms.Al" Collapsed="true">
+    <Position X="3.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Atoms\Al.cs</FileName>
+      <NewMemberFileName>Atoms\Hydrogen.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.Atoms.Hydrogen" Collapsed="true">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Atoms\Hydrogen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microcosm.ElementaryParticles.ElementaryParticle">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgKAAAA=</HashCode>
+      <FileName>ElementaryParticles\ElementaryParticle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
