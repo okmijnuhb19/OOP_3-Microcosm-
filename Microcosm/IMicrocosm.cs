@@ -11,6 +11,8 @@ namespace Microcosm
     {
         double Mass { get; }
 
+        double e { get; }
+
         void Add(IMicrocosm particular);
 
         void Remove(IMicrocosm particular);

@@ -8,6 +8,6 @@ namespace WatchLib
 {
     interface IAlarmWatch
     {
-        public string Alarm();
+        string Alarm();
     }
 }

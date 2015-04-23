@@ -8,8 +8,6 @@ namespace WatchLib
     public class ElectronicWatch: Watch, IAlarmWatch
     {
         protected string electronicCircuit;
-        protected string electricitySource;
-        protected string alarmSignal;
 
         public virtual string ElectricitySource { get; set; }
         public virtual string AlarmSignal { get; set; }
@@ -17,13 +15,13 @@ namespace WatchLib
         public ElectronicWatch(string electronicCircuit, string electricitySource, string alarmSignal)
         {
             this.electronicCircuit = electronicCircuit;
-            this.alarmSignal = alarmSignal;
-            this.electricitySource = electricitySource;
+            this.AlarmSignal = alarmSignal;
+            this.ElectricitySource = electricitySource;
         }
 
         public string Alarm()
         {
-            return alarmSignal;
+            return AlarmSignal;
         }
     }
 }

@@ -5,14 +5,14 @@ using System.Text;
 
 namespace WatchLib
 {
-    public class QuartzClock : ElectronicWatch, IAnalogWatch
+    public class QuartzWatch : ElectronicWatch, IAnalogWatch
     {
-        protected string quartzCrystal;
+        public string QuartzCrystal { get; set; }
 
-        public QuartzClock(string quartzCrystal, string electricitySource, string electronicCircuit, string alarmSygnal)
+        public QuartzWatch(string quartzCrystal, string electricitySource, string electronicCircuit, string alarmSygnal)
             : base(electronicCircuit, electricitySource, alarmSygnal)
         {
-            this.quartzCrystal = quartzCrystal;
+            this.QuartzCrystal = quartzCrystal;
         }
 
         public void AnalogDisplay()

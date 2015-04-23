@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace Microcosm.ElementaryParticles
 {
     [Serializable]
-    public class Neutron : ElementaryParticle
+    public class Neutron : Nucleon
     {
         public Neutron()
         {
             mass = 1;
-            e = 0;
+            electricCharge = 0;
             spin = 0.5;
         }
 

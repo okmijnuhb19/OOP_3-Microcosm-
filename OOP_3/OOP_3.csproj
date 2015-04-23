@@ -78,9 +78,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Microcosm\Microcosm.csproj">
-      <Project>{9fcf602b-6f2e-42d0-88d6-77a2abb18f50}</Project>
-      <Name>Microcosm</Name>
+    <ProjectReference Include="..\WatchLib\WatchLib.csproj">
+      <Project>{7447453c-ce75-4e3f-a832-e943e811454d}</Project>
+      <Name>WatchLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

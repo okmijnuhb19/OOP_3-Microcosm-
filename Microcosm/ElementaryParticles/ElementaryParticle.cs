@@ -7,33 +7,23 @@ using System.Threading.Tasks;
 namespace Microcosm.ElementaryParticles
 {
     [Serializable]
-    public abstract class ElementaryParticle : IMicrocosm
+    public class ElementaryParticle : FundamentalParticle
     {
-        protected double mass;
-        protected double e;
-        protected double spin;
+        private List<IMicrocosm> particles;
 
-        public double Mass { get { return mass; } }
-        public double E { get { return e; } }
-        public double Spin { get { return spin; } }
-
-
-        public void Add(IMicrocosm particular)
+        public override void Add(IMicrocosm particular)
         {
             throw new NotImplementedException("Elementary particle can't contain elements");
         }
 
-        public void Remove(IMicrocosm particular)
+        public override void Remove(IMicrocosm particular)
         {
             throw new NotImplementedException("Elementary particle can't contain elements");
         }
 
-        public System.Collections.IEnumerator GetEnumerator()
+        public override System.Collections.IEnumerator GetEnumerator()
         {
             yield return this;
         }
-
-
-        public virtual void Access(IVisitor visitor) { }
     }
 }

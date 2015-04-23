@@ -7,10 +7,10 @@ namespace WatchLib
 {
     public class SandGlass : Watch, IStopwatch
     {
-        private double upperSand;
-        private double bottomSand;
-        private double sand;
-        private double totalTime;
+        public double upperSand;
+        public double bottomSand;
+        public double sand;
+        public double totalTime;
  
         public SandGlass(double sand, double totalTime)
         {

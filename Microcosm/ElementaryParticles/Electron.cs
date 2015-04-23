@@ -12,7 +12,7 @@ namespace Microcosm.ElementaryParticles
         public Electron()
         {
             mass = 5.48E-4;
-            e = -1.6;
+            electricCharge = -1.6;
             spin = 0.5;
         }
 

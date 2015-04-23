@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CloackLib
+namespace Microcosm
 {
-    public class ElectronicWatch: Cloack
+    public class SandGlass : Cloack
     {
-        private int electronicCircuit;
     }
 }

@@ -9,7 +9,7 @@ namespace WatchLib
     {
         public virtual string Time()
         {
-            return DateTime.Today.TimeOfDay.ToString();
+            return DateTime.Now.ToLongTimeString();
         }
     }
 }

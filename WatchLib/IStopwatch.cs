@@ -8,8 +8,8 @@ namespace WatchLib
 {
     interface IStopwatch
     {
-        public void start();
+        void Start();
 
-        public void reset();
+        void Reset();
     }
 }

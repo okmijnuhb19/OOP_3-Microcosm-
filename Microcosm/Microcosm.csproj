@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cloack.cs" />
+    <Compile Include="CuckooClock.cs" />
+    <Compile Include="ElectronicWatch.cs" />
+    <Compile Include="ElementaryParticles\Nucleon.cs" />
+    <Compile Include="ElementaryParticles\Quark.cs" />
+    <Compile Include="ElementaryParticles\FundamentalParticle.cs" />
     <Compile Include="MicrocosmCreator.cs" />
     <Compile Include="MicrocosmFactory.cs" />
     <Compile Include="Atoms\Nucleus.cs" />
@@ -55,6 +61,9 @@
     <Compile Include="MicrocosmNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ElementaryParticles\Proton.cs" />
+    <Compile Include="QuartzClock.cs" />
+    <Compile Include="SandGlass.cs" />
+    <Compile Include="Sundial.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
