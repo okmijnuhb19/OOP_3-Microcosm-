@@ -1,53 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="CloackLib.Cloack" Collapsed="true">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Cloack.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CloackLib.CuckooClock" Collapsed="true">
-    <Position X="2" Y="3" Width="1.5" />
+    <Position X="2" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>CuckooClock.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CloackLib.MechanicalWatches" Collapsed="true">
-    <Position X="2" Y="1.75" Width="1.5" />
+    <Position X="2" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAACAABAAAAAAAA=</HashCode>
       <FileName>MechanicalWatches.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="CloackLib.QuartzClock" Collapsed="true">
-    <Position X="3.75" Y="3" Width="1.5" />
+    <Position X="4" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAQA=</HashCode>
       <FileName>QuartzClock.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CloackLib.SandGlass" Collapsed="true">
-    <Position X="5.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SandGlass.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CloackLib.Sundial" Collapsed="true">
-    <Position X="7.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Sundial.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="CloackLib.ElectronicWatch" Collapsed="true">
-    <Position X="3.75" Y="1.75" Width="1.5" />
+    <Position X="4" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAACAAAAAgAAAAAAADAAAAAgAA=</HashCode>
       <FileName>ElectronicWatch.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CloackLib.SandGlass" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBABAAAAAAAAAABAQAAAACAAAACAAAAAQA=</HashCode>
+      <FileName>SandGlass.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

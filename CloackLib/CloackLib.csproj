@@ -39,14 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Cloack.cs" />
     <Compile Include="CuckooClock.cs" />
     <Compile Include="ElectronicWatch.cs" />
+    <Compile Include="IAlarmClock.cs" />
+    <Compile Include="IStopwatch.cs" />
     <Compile Include="MechanicalWatches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuartzClock.cs" />
     <Compile Include="SandGlass.cs" />
-    <Compile Include="Sundial.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

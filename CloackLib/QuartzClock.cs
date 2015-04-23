@@ -7,6 +7,17 @@ namespace CloackLib
 {
     public class QuartzClock : ElectronicWatch
     {
-        private int quartzCrystal;
+        protected string quartzCrystal;
+
+        public QuartzClock(string quartzCrystal, string electricitySource, string electronicCircuit, string alarmSygnal)
+            : base(electronicCircuit, electricitySource, alarmSygnal)
+        {
+            this.quartzCrystal = quartzCrystal;
+        }
+
+        public override string Time()
+        {
+            return "cloack face: " + base.Time();
+        }
     }
 }

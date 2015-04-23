@@ -7,6 +7,17 @@ namespace CloackLib
 {
     public class CuckooClock : MechanicalWatches
     {
-        private int cuckoo;
+        protected string cuckoo;
+
+        public CuckooClock(string cuckoo, string energySource, string oscillatorySystem)
+            : base(energySource, oscillatorySystem)
+        {
+            this.cuckoo = cuckoo;
+        }
+
+        public override string Alarm()
+        {
+            return cuckoo;
+        }
     }
 }

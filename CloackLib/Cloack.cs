@@ -5,11 +5,11 @@ using System.Text;
 
 namespace CloackLib
 {
-    public class Cloack
+    public abstract class Cloack
     {
-        public void Time()
+        public virtual string Time()
         {
-            throw new System.NotImplementedException();
+            return DateTime.Today.TimeOfDay.ToString();
         }
     }
 }
