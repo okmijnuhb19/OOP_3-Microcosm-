@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CloackLib
+namespace WatchLib
 {
-    public abstract class Cloack
+    public abstract class Watch
     {
         public virtual string Time()
         {

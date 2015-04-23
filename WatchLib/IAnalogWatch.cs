@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CloackLib
+namespace WatchLib
 {
-    interface IAlarmClock
+    public interface IAnalogWatch
     {
-        public string Alarm();
+        void AnalogDisplay();
     }
 }

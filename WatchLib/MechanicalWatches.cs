@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CloackLib
+namespace WatchLib
 {
-    public class MechanicalWatches : Cloack, IAlarmClock
+    public class MechanicalWatches : Watch, IAlarmWatch, IAnalogWatch
     {
         //spring or weight lifted
         protected string energySource;
@@ -21,6 +21,11 @@ namespace CloackLib
         public virtual string Alarm()
         {
             return "Constant Sygnal";
+        }
+
+        public void AnalogDisplay()
+        {
+            throw new NotImplementedException();
         }
     }
 }

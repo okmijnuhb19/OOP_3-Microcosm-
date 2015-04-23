@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CloackLib
+namespace WatchLib
 {
-    public class CuckooClock : MechanicalWatches
+    public class CuckooWatch : MechanicalWatches
     {
         protected string cuckoo;
 
-        public CuckooClock(string cuckoo, string energySource, string oscillatorySystem)
+        public CuckooWatch(string cuckoo, string energySource, string oscillatorySystem)
             : base(energySource, oscillatorySystem)
         {
             this.cuckoo = cuckoo;

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CloackLib
+namespace WatchLib
 {
-    public class QuartzClock : ElectronicWatch
+    public class QuartzClock : ElectronicWatch, IAnalogWatch
     {
         protected string quartzCrystal;
 
@@ -15,9 +15,9 @@ namespace CloackLib
             this.quartzCrystal = quartzCrystal;
         }
 
-        public override string Time()
+        public void AnalogDisplay()
         {
-            return "cloack face: " + base.Time();
+            throw new NotImplementedException();
         }
     }
 }

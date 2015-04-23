@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CloackLib
+namespace WatchLib
 {
-    public class SandGlass : Cloack, IStopwatch
+    public class SandGlass : Watch, IStopwatch
     {
         private double upperSand;
         private double bottomSand;
