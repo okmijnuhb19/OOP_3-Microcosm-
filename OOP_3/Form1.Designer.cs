@@ -31,6 +31,7 @@
             this.DeleteNodeBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.LoadBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DeleteNodeBtn
@@ -62,11 +63,22 @@
             this.LoadBtn.UseVisualStyleBackColor = true;
             this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
             // 
+            // AddBtn
+            // 
+            this.AddBtn.Location = new System.Drawing.Point(319, 290);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(75, 23);
+            this.AddBtn.TabIndex = 7;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 325);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.LoadBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.DeleteNodeBtn);
@@ -81,6 +93,7 @@
         private System.Windows.Forms.Button DeleteNodeBtn;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button LoadBtn;
+        private System.Windows.Forms.Button AddBtn;
 
     }
 }

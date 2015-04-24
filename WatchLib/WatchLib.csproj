@@ -57,10 +57,11 @@
     <Compile Include="WatchCreatingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="WatchCreatingWidget.cs" />
+    <Compile Include="WatchCreatingWidgetVisitor.cs" />
     <Compile Include="WatchField.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="WatchInitVisitor.cs" />
     <Compile Include="WatchVisitor.cs" />
     <Compile Include="WidgetWatchVisitor.cs" />
   </ItemGroup>

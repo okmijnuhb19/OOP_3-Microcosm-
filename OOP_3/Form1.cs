@@ -15,6 +15,7 @@ namespace OOP_3
 {
     public partial class Form1 : Form
     {
+        IWatchCreator sandGlassCreator = new SandGlassCreator();
         IRepository<Watch> rep = new WatchRepository("db.bin");
         List<WatchControl> watchControls = new List<WatchControl>();
 
@@ -65,6 +66,22 @@ namespace OOP_3
         {
             rep.Clear();
             DeleteWidgetsFormDisplay();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            Watch w = sandGlassCreator.Create();
+            var wi = new WatchInitializingForm(w);
+
+            wi.WatchInitializingEnded += onWatchInitializingEnded;
+        }
+
+        private void onWatchInitializingEnded(object sender, WatchInitEndedEventArgs e)
+        {
+            rep.Insert(e.watch);
+
+            DeleteWidgetsFormDisplay();
+            DrawWatches(rep.Load());
         }
 
     }

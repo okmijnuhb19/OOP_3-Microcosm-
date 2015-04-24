@@ -13,6 +13,13 @@ namespace WatchLib
         public virtual string ElectricitySource { get; set; }
         public virtual string AlarmSignal { get; set; }
 
+        public ElectronicWatch()
+        {
+            this.electronicCircuit = "";
+            this.AlarmSignal = "";
+            this.ElectricitySource = "";
+        }
+
         public ElectronicWatch(string electronicCircuit, string electricitySource, string alarmSignal)
         {
             this.electronicCircuit = electronicCircuit;

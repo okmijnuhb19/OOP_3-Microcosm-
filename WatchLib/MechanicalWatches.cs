@@ -16,6 +16,12 @@ namespace WatchLib
         public string EnergySource { get { return energySource; } set { energySource = value; } }
         public string OscillatorySystem { get { return oscillatorySystem; } set { oscillatorySystem = value; } }
 
+        public MechanicalWatches()
+        {
+            this.energySource = "";
+            this.oscillatorySystem = "";
+        }
+
         public MechanicalWatches(string energySource, string oscillatorySystem)
         {
             this.energySource = energySource;

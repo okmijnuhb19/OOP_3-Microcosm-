@@ -13,6 +13,12 @@ namespace WatchLib
         public double sand;
         public double totalTime;
  
+        public SandGlass()
+        {
+            this.sand = 0;
+            this.totalTime = 0;
+        }
+
         public SandGlass(double sand, double totalTime)
         {
             this.sand = sand;

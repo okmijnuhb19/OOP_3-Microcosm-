@@ -10,6 +10,12 @@ namespace WatchLib
     {
         public string QuartzCrystal { get; set; }
 
+        public QuartzWatch()
+            :base()
+        {
+            QuartzCrystal = "";
+        }
+
         public QuartzWatch(string quartzCrystal, string electricitySource, string electronicCircuit, string alarmSygnal)
             : base(electronicCircuit, electricitySource, alarmSygnal)
         {

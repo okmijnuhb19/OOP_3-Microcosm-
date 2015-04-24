@@ -6,7 +6,7 @@ using System.Text;
 namespace WatchLib
 {
     [Serializable]
-    public abstract class Watch
+    public class Watch
     {
         public virtual string Time()
         {

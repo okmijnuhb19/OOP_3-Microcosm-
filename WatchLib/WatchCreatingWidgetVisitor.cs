@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace WatchLib
 {
-    class WatchCreatingWidget : WatchVisitor<WatchCreatingControl>
+    public class WatchCreatingWidgetVisitor : WatchVisitor<WatchCreatingControl>
     {
         private int elementY;
         private int elementMarginY = 10;
         private int elementMarginX = 10;
-        private int elementStartPosY = 40;
+        private int elementStartPosY = 60;
         private string watchType;
 
         WatchCreatingControl watchControl;
@@ -27,11 +27,7 @@ namespace WatchLib
             return watchControl;
         }
 
-        protected override void Visit(Watch w)
-        {
-            WatchField wf = new WatchField("Time", "");
-            AddWatchField(wf);
-        }
+        protected override void Visit(Watch w) { }
 
         protected override void Visit(SandGlass w)
         {

@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace WatchLib
 {
-    class WatchCreatingControl : UserControl
+    public class WatchCreatingControl : UserControl
     {
         private Label watchType;
-        private Button CreateBtn;
+        public Button CreateBtn;
 
         public Watch Watch { get; set; }
         public string WatchType { get { return watchType.Text; } set { SetWatchType(value); } }
@@ -35,6 +35,28 @@ namespace WatchLib
         {
             c.Parent = this;
             this.Controls.Add(c);
+        }
+
+        public IEnumerable<WatchField> GetWatchFields()
+        {
+            foreach(Control c in this.Controls)
+            {
+                if(c is WatchField)
+                {
+                    yield return (c as WatchField);
+                }
+            }
+        }
+
+        public Dictionary<string, string> GetWatchFieldsAsDictionary()
+        {
+            var dic = new Dictionary<string, string>();
+            foreach(WatchField wf in GetWatchFields())
+            {
+                dic.Add(wf.fieldName.Text, wf.fieldValue.Text);
+            }
+
+            return dic;
         }
 
         private void InitializeComponent()

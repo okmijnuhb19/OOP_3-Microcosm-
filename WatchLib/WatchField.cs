@@ -9,8 +9,8 @@ namespace WatchLib
 {
     public class WatchField : UserControl
     {
-        private Label fieldName;
-        private TextBox fieldValue;
+        public Label fieldName;
+        public TextBox fieldValue;
         
         public WatchField(string fieldName, string value)
         {
