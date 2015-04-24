@@ -5,6 +5,7 @@ using System.Text;
 
 namespace WatchLib
 {
+    [Serializable]
     public class SandGlass : Watch, IStopwatch
     {
         public double upperSand;

@@ -5,6 +5,7 @@ using System.Text;
 
 namespace WatchLib
 {
+    [Serializable]
     public class CuckooWatch : MechanicalWatches
     {
         protected string cuckoo;

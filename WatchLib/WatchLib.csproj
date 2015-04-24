@@ -54,6 +54,10 @@
     <Compile Include="WatchControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="WatchCreatingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WatchCreatingWidget.cs" />
     <Compile Include="WatchField.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -66,6 +70,9 @@
   <ItemGroup>
     <EmbeddedResource Include="WatchControl.resx">
       <DependentUpon>WatchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WatchCreatingControl.resx">
+      <DependentUpon>WatchCreatingControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WatchField.resx">
       <DependentUpon>WatchField.cs</DependentUpon>

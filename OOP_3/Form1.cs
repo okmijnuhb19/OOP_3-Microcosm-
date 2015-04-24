@@ -15,34 +15,56 @@ namespace OOP_3
 {
     public partial class Form1 : Form
     {
+        IRepository<Watch> rep = new WatchRepository("db.bin");
+        List<WatchControl> watchControls = new List<WatchControl>();
+
         public Form1()
         {
             InitializeComponent();
 
-            BinaryFormatter bf = new BinaryFormatter();
+            rep.Insert(new QuartzWatch("simple", "battery", "cpu", "tzzzz"));
         }
 
-        private void DrawButton_Click(object sender, EventArgs e)
+        private void DrawWatches(IEnumerable<Watch> watches)
         {
-            DrawWatch();
-        }
+            int x = 10;
+            int y = 10;
+            int marginX = 0;
 
-        private void DrawWatch()
-        {
-            Watch w = new SandGlass(100, 1000);
             WatchVisitor<WatchControl> visitor = new WidgetWatchVisitor();
-            WatchControl wc = visitor.DynemicVisit(w);
-            wc.Parent = this;
-            wc.AutoSize = true;
-            wc.Location = new Point(50, 50);
-            this.Controls.Add(wc);
 
-            w = new QuartzWatch("simple quartz", "battery", "arduino", "tzzzz");
-            wc = visitor.DynemicVisit(w);
-            wc.Parent = this;
-            wc.AutoSize = true;
-            wc.Location = new Point(50 + wc.Width, 50);
-            this.Controls.Add(wc);
+            foreach (Watch w in watches)
+            {
+                WatchControl wc = visitor.DynemicVisit(w);
+                wc.Parent = this;
+                wc.AutoSize = true;
+                wc.Location = new Point(x, 50);
+                this.Controls.Add(wc);
+                watchControls.Add(wc);
+
+                x += wc.Width + marginX;
+            }
+        }
+
+        private void LoadBtn_Click(object sender, EventArgs e)
+        {
+            DeleteWidgetsFormDisplay();
+            DrawWatches(rep.Load());
+        }
+
+        private void DeleteWidgetsFormDisplay()
+        {
+            foreach (var control in watchControls)
+            {
+                this.Controls.Remove(control);
+                control.Dispose();
+            }
+        }
+
+        private void DeleteNodeBtn_Click(object sender, EventArgs e)
+        {
+            rep.Clear();
+            DeleteWidgetsFormDisplay();
         }
 
     }

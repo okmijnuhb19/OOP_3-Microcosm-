@@ -5,6 +5,7 @@ using System.Text;
 
 namespace WatchLib
 {
+    [Serializable]
     public class QuartzWatch : ElectronicWatch, IAnalogWatch
     {
         public string QuartzCrystal { get; set; }

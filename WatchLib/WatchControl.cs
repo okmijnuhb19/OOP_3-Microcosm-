@@ -22,12 +22,12 @@ namespace WatchLib
         public WatchControl(Watch watch)
             :this()
         {
-
             this.Watch = watch;
         }
 
         public void Add(Control c)
         {
+            c.Parent = this;
             this.Controls.Add(c);
         }
 
@@ -54,7 +54,7 @@ namespace WatchLib
             // 
             this.Controls.Add(this.watchType);
             this.Name = "WatchControl";
-            this.Size = new System.Drawing.Size(187, 157);
+            this.Size = new System.Drawing.Size(139, 157);
             this.ResumeLayout(false);
             this.PerformLayout();
 

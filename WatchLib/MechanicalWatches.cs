@@ -5,6 +5,7 @@ using System.Text;
 
 namespace WatchLib
 {
+    [Serializable]
     public class MechanicalWatches : Watch, IAlarmWatch, IAnalogWatch
     {
         //spring or weight lifted

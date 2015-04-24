@@ -31,7 +31,6 @@
             this.DeleteNodeBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.LoadBtn = new System.Windows.Forms.Button();
-            this.DrawBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DeleteNodeBtn
@@ -42,6 +41,7 @@
             this.DeleteNodeBtn.TabIndex = 4;
             this.DeleteNodeBtn.Text = "Delete";
             this.DeleteNodeBtn.UseVisualStyleBackColor = true;
+            this.DeleteNodeBtn.Click += new System.EventHandler(this.DeleteNodeBtn_Click);
             // 
             // SaveBtn
             // 
@@ -60,23 +60,13 @@
             this.LoadBtn.TabIndex = 6;
             this.LoadBtn.Text = "Load";
             this.LoadBtn.UseVisualStyleBackColor = true;
-            // 
-            // DrawBtn
-            // 
-            this.DrawBtn.Location = new System.Drawing.Point(562, 161);
-            this.DrawBtn.Name = "DrawBtn";
-            this.DrawBtn.Size = new System.Drawing.Size(75, 23);
-            this.DrawBtn.TabIndex = 7;
-            this.DrawBtn.Text = "Draw";
-            this.DrawBtn.UseVisualStyleBackColor = true;
-            this.DrawBtn.Click += new System.EventHandler(this.DrawButton_Click);
+            this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 325);
-            this.Controls.Add(this.DrawBtn);
             this.Controls.Add(this.LoadBtn);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.DeleteNodeBtn);
@@ -91,7 +81,6 @@
         private System.Windows.Forms.Button DeleteNodeBtn;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button LoadBtn;
-        private System.Windows.Forms.Button DrawBtn;
 
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 
 namespace WatchLib
 {
+    [Serializable]
     public class ElectronicWatch: Watch, IAlarmWatch
     {
         protected string electronicCircuit;
