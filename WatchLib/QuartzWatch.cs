@@ -16,8 +16,8 @@ namespace WatchLib
             QuartzCrystal = "";
         }
 
-        public QuartzWatch(string quartzCrystal, string electricitySource, string electronicCircuit, string alarmSygnal)
-            : base(electronicCircuit, electricitySource, alarmSygnal)
+        public QuartzWatch(string quartzCrystal, string electricitySource, string alarmSygnal)
+            : base(electricitySource, alarmSygnal)
         {
             this.QuartzCrystal = quartzCrystal;
         }

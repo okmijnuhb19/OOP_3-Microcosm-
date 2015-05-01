@@ -32,6 +32,7 @@
             this.SaveBtn = new System.Windows.Forms.Button();
             this.LoadBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
+            this.watchComboBox = new WatchLib.WatchComboBox();
             this.SuspendLayout();
             // 
             // DeleteNodeBtn
@@ -52,6 +53,7 @@
             this.SaveBtn.TabIndex = 5;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.UseVisualStyleBackColor = true;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // LoadBtn
             // 
@@ -73,11 +75,26 @@
             this.AddBtn.UseVisualStyleBackColor = true;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
+            // watchComboBox
+            // 
+            this.watchComboBox.FormattingEnabled = true;
+            this.watchComboBox.Items.AddRange(new object[] {
+            "Electronic",
+            "Quartz",
+            "Mechanical",
+            "CucooWatch",
+            "SandGlass"});
+            this.watchComboBox.Location = new System.Drawing.Point(192, 292);
+            this.watchComboBox.Name = "watchComboBox";
+            this.watchComboBox.Size = new System.Drawing.Size(121, 21);
+            this.watchComboBox.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 325);
+            this.Controls.Add(this.watchComboBox);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.LoadBtn);
             this.Controls.Add(this.SaveBtn);
@@ -94,6 +111,7 @@
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button LoadBtn;
         private System.Windows.Forms.Button AddBtn;
+        private WatchLib.WatchComboBox watchComboBox;
 
     }
 }

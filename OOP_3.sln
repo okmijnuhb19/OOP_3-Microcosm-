@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_3", "OOP_3\OOP_3.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchLib", "WatchLib\WatchLib.csproj", "{7447453C-CE75-4E3F-A832-E943E811454D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{8CEDF915-CA36-4215-B57B-D9C848B9C6A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7447453C-CE75-4E3F-A832-E943E811454D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7447453C-CE75-4E3F-A832-E943E811454D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7447453C-CE75-4E3F-A832-E943E811454D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CEDF915-CA36-4215-B57B-D9C848B9C6A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEDF915-CA36-4215-B57B-D9C848B9C6A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEDF915-CA36-4215-B57B-D9C848B9C6A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEDF915-CA36-4215-B57B-D9C848B9C6A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

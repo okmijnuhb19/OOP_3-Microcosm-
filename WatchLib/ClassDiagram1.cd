@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="WatchLib.CuckooWatch" Collapsed="true">
-    <Position X="2.25" Y="3.5" Width="1.5" />
+  <Class Name="WatchLib.CuckooWatch">
+    <Position X="2.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>CuckooWatch.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WatchLib.QuartzWatch" Collapsed="true">
-    <Position X="4.75" Y="3.5" Width="1.5" />
+  <Class Name="WatchLib.QuartzWatch">
+    <Position X="4.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEAAAAAA=</HashCode>
       <FileName>QuartzWatch.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="WatchLib.ElectronicWatch" Collapsed="true">
+  <Class Name="WatchLib.ElectronicWatch">
     <Position X="4.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABAAAAAgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABAAAAAgAA=</HashCode>
       <FileName>ElectronicWatch.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="WatchLib.SandGlass" Collapsed="true">
+  <Class Name="WatchLib.SandGlass">
     <Position X="7.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACBABAAAAAAAAAABAQAAAACAAAACAAAAAQA=</HashCode>
@@ -38,7 +38,7 @@
       <FileName>Watch.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WatchLib.MechanicalWatches" Collapsed="true">
+  <Class Name="WatchLib.MechanicalWatches">
     <Position X="2.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAAAAACAAAAEgCAABAAAAAAAA=</HashCode>

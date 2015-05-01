@@ -10,8 +10,9 @@ namespace WatchLib
     public class WatchControl : UserControl
     {
         private Label watchType;
+        private Watch watch;
     
-        public Watch Watch { get; set; }
+        public Watch Watch { get{ return GetWatch(); } }
         public string WatchType { get { return watchType.Text; } set { SetWatchType(value); } }
 
         public WatchControl() 
@@ -22,13 +23,41 @@ namespace WatchLib
         public WatchControl(Watch watch)
             :this()
         {
-            this.Watch = watch;
+            this.watch = watch;
         }
 
         public void Add(Control c)
         {
             c.Parent = this;
             this.Controls.Add(c);
+        }
+
+        public IEnumerable<WatchField> GetWatchFields()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is WatchField)
+                {
+                    yield return (c as WatchField);
+                }
+            }
+        }
+
+        public Dictionary<string, string> GetWatchFieldsAsDictionary()
+        {
+            var dic = new Dictionary<string, string>();
+            foreach (WatchField wf in GetWatchFields())
+            {
+                dic.Add(wf.fieldName.Text, wf.fieldValue.Text);
+            }
+
+            return dic;
+        }
+
+        private Watch GetWatch()
+        {
+            var visitor = new WatchInitVisitor(GetWatchFieldsAsDictionary());
+            return visitor.DynemicVisit(watch);
         }
 
         private void SetWatchType(string type)

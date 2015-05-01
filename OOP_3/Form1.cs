@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace OOP_3
 {
     public partial class Form1 : Form
     {
+        IFactory<Watch> watchFactory = new WatchFactory();
         IWatchCreator sandGlassCreator = new SandGlassCreator();
         IRepository<Watch> rep = new WatchRepository("db.bin");
         List<WatchControl> watchControls = new List<WatchControl>();
@@ -22,8 +24,6 @@ namespace OOP_3
         public Form1()
         {
             InitializeComponent();
-
-            rep.Insert(new QuartzWatch("simple", "battery", "cpu", "tzzzz"));
         }
 
         private void DrawWatches(IEnumerable<Watch> watches)
@@ -50,6 +50,7 @@ namespace OOP_3
         private void LoadBtn_Click(object sender, EventArgs e)
         {
             DeleteWidgetsFormDisplay();
+            watchControls.Clear();
             DrawWatches(rep.Load());
         }
 
@@ -70,7 +71,7 @@ namespace OOP_3
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            Watch w = sandGlassCreator.Create();
+            Watch w = watchFactory.FactoryMethod(watchComboBox.Text);
             var wi = new WatchInitializingForm(w);
 
             wi.WatchInitializingEnded += onWatchInitializingEnded;
@@ -84,5 +85,14 @@ namespace OOP_3
             DrawWatches(rep.Load());
         }
 
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            rep.Clear();
+            IEnumerable<Watch> watches = watchControls.Select(x => x.Watch);
+            foreach(Watch w in watches)
+            {
+                rep.Insert(w);
+            }
+        }
     }
 }

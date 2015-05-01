@@ -58,7 +58,7 @@ namespace WatchLib
         protected override void Visit(QuartzWatch w)
         {
             base.Visit(w);
-            w.QuartzCrystal = fields["QuartzWatch"];
+            w.QuartzCrystal = fields["QuartzCrystal"];
         }
     }
 }

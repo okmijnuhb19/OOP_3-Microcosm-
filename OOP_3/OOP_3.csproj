@@ -52,9 +52,11 @@
     </Compile>
     <Compile Include="IRepository.cs" />
     <Compile Include="IWatchCreator.cs" />
+    <Compile Include="IFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WatchCreator.cs" />
+    <Compile Include="WatchFactory.cs" />
     <Compile Include="WatchInitFormClosedEventArgs.cs" />
     <Compile Include="WatchInitializingForm.cs">
       <SubType>Form</SubType>
@@ -86,6 +88,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{8cedf915-ca36-4215-b57b-d9c848b9c6a8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WatchLib\WatchLib.csproj">
       <Project>{7447453c-ce75-4e3f-a832-e943e811454d}</Project>
       <Name>WatchLib</Name>

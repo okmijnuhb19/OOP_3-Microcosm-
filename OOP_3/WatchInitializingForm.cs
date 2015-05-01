@@ -32,20 +32,16 @@ namespace OOP_3
 
             this.Controls.Add(wcc);
 
-            wcc.CreateBtn.Click += CloseForm;
+            wcc.CreateBtn.Click += InitializeFields;
         }
 
-        void CloseForm(object sender, EventArgs e)
-        {
-            InitializeFields();
-            this.Close();
-        }
-
-        void InitializeFields()
+        void InitializeFields(object sender, EventArgs e)
         {
             var wiv = new WatchInitVisitor(wcc.GetWatchFieldsAsDictionary());
             wiv.DynemicVisit(watch);
             WatchInitializingEnded(this, new WatchInitEndedEventArgs(watch));
+
+            this.Close();
         }
 
     }

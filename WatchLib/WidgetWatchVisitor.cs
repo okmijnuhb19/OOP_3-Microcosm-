@@ -69,7 +69,7 @@ namespace WatchLib
         {
             base.Visit(w);
             watchType = "ElectronicWatch";
-            
+                       
             WatchField wf = new WatchField("ElectricitySource", w.ElectricitySource);
             AddWatchField(wf);
             wf = new WatchField("AlarmSignal", w.AlarmSignal);
