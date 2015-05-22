@@ -33,6 +33,9 @@
             this.LoadBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
             this.watchComboBox = new WatchLib.WatchComboBox();
+            this.addPluginBtn = new System.Windows.Forms.Button();
+            this.SavingOptionComboBox = new WatchLib.WatchComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DeleteNodeBtn
@@ -78,22 +81,47 @@
             // watchComboBox
             // 
             this.watchComboBox.FormattingEnabled = true;
-            this.watchComboBox.Items.AddRange(new object[] {
-            "Electronic",
-            "Quartz",
-            "Mechanical",
-            "CucooWatch",
-            "SandGlass"});
             this.watchComboBox.Location = new System.Drawing.Point(192, 292);
             this.watchComboBox.Name = "watchComboBox";
             this.watchComboBox.Size = new System.Drawing.Size(121, 21);
             this.watchComboBox.TabIndex = 8;
+            // 
+            // addPluginBtn
+            // 
+            this.addPluginBtn.Location = new System.Drawing.Point(13, 289);
+            this.addPluginBtn.Name = "addPluginBtn";
+            this.addPluginBtn.Size = new System.Drawing.Size(75, 23);
+            this.addPluginBtn.TabIndex = 9;
+            this.addPluginBtn.Text = "Add plugin";
+            this.addPluginBtn.UseVisualStyleBackColor = true;
+            this.addPluginBtn.Click += new System.EventHandler(this.addPluginBtn_Click);
+            // 
+            // SavingOptionComboBox
+            // 
+            this.SavingOptionComboBox.FormattingEnabled = true;
+            this.SavingOptionComboBox.Location = new System.Drawing.Point(495, 27);
+            this.SavingOptionComboBox.Name = "SavingOptionComboBox";
+            this.SavingOptionComboBox.Size = new System.Drawing.Size(142, 21);
+            this.SavingOptionComboBox.TabIndex = 10;
+            this.SavingOptionComboBox.SelectedValueChanged += new System.EventHandler(this.SavingOptionComboBox_SelectionChangeCommitted);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(492, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Saving Option:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 325);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SavingOptionComboBox);
+            this.Controls.Add(this.addPluginBtn);
             this.Controls.Add(this.watchComboBox);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.LoadBtn);
@@ -101,7 +129,9 @@
             this.Controls.Add(this.DeleteNodeBtn);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,6 +142,9 @@
         private System.Windows.Forms.Button LoadBtn;
         private System.Windows.Forms.Button AddBtn;
         private WatchLib.WatchComboBox watchComboBox;
+        private System.Windows.Forms.Button addPluginBtn;
+        private WatchLib.WatchComboBox SavingOptionComboBox;
+        private System.Windows.Forms.Label label1;
 
     }
 }

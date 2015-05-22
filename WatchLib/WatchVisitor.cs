@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace WatchLib
 {
-    public abstract class WatchVisitor<T> where T: new()
+    public abstract class WatchVisitor<T> where T : new()
     {
         public virtual T DynemicVisit(Watch w)
         {
-            Visit((dynamic)w);
+            if (w is IPlugable)
+            {
+                Visit((IPlugable)w);
+            }
+            else
+            {
+                Visit((dynamic)w);
+            }
             return new T();
         }
         protected abstract void Visit(Watch w);
@@ -22,5 +29,7 @@ namespace WatchLib
 
         protected virtual void Visit(ElectronicWatch w) { Visit((Watch)w); }
         protected virtual void Visit(QuartzWatch w) { Visit((ElectronicWatch)w); }
+
+        protected virtual void Visit(IPlugable w) { }
     }
 }

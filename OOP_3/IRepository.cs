@@ -9,6 +9,8 @@ namespace OOP_3
 {
     interface IRepository<T>
     {
+        ISavingOption<T> SavingOption { get; set; }
+
         void Insert(T entity);
         void Delete(T entity);
         IEnumerable<T> Load();

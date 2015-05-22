@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WatchLib.WatchVisitor&lt;T&gt;" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>WatchVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WatchLib.WatchInitVisitor" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>WatchInitVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WatchLib.WidgetWatchVisitor" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAgAEAQAAQAACAQAAAAAAAAABAAAAEAAAAA=</HashCode>
+      <FileName>WidgetWatchVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WatchLib.WatchCreatingWidgetVisitor" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAgAEAQAAQAACAQAAAAAAAAABAAAAEAAAAA=</HashCode>
+      <FileName>WatchCreatingWidgetVisitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

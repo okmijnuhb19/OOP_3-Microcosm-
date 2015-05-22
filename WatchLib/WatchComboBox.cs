@@ -9,21 +9,14 @@ namespace WatchLib
 {
     public class WatchComboBox : ComboBox
     {
-        public WatchComboBox()
+        public void SetClasses(string[] types)
         {
-            /*foreach(var item in WatchClasses())
-            {
-                this.Items.Add(item);
-            }*/
-        }
+            this.Items.Clear();
 
-        private IEnumerable<string> WatchClasses()
-        {
-            yield return "Electronic";
-            yield return "Quartz";
-            yield return "Mechanical";
-            yield return "CucooWatch";
-            yield return "SandGlass";
+            foreach(var type in types)
+            {
+                this.Items.Add(type);
+            }
         }
     }
 }

@@ -84,6 +84,14 @@ namespace WatchLib
             AddWatchField(wf);
         }
 
+        protected override void Visit(IPlugable w) 
+        {
+            foreach(var f in w.GetFields())
+            {
+                AddWatchField(f);
+            }
+        }
+
         private void AddWatchField(WatchField wf)
         {
             wf.Top = elementY;

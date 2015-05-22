@@ -2,58 +2,51 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using WatchLib;
 
 namespace OOP_3
 {
-    class WatchRepository : IRepository<WatchLib.Watch>
+    class WatchRepository : IRepository<Watch>
     {
         string dbName;
+        
+        public ISavingOption<Watch> SavingOption { get; set; }
 
         public WatchRepository(string dbName)
         {
             this.dbName = dbName;
+            this.SavingOption = new DefaultSavingOption<Watch>();
         }
 
-        public void Insert(WatchLib.Watch entity)
+        public void Insert(Watch entity)
         {
-            BinaryFormatter bf = new BinaryFormatter();
-
             if (!File.Exists(dbName))
             {
                 using (File.Create(dbName)) { }
             }
 
-            using (Stream stream = new FileStream(dbName, FileMode.Append))
-            {
-                bf.Serialize(stream, entity);
-            }
+            SavingOption.Save(dbName, entity, BinarySerializer.Instance);
         }
 
-        public void Delete(WatchLib.Watch entity)
+        public void Delete(Watch entity)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<WatchLib.Watch> Load()
+        public IEnumerable<Watch> Load()
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            List<WatchLib.Watch> watches = new List<WatchLib.Watch>();
-
             if(!File.Exists(dbName))
             {
-                return watches;
+                return new List<Watch>();
             }
 
-            using (Stream stream = File.OpenRead(dbName))
-            {
-                while(stream.Position < stream.Length)
-                    watches.Add((WatchLib.Watch)bf.Deserialize(stream));
-            }
-
-            return watches.Select(x => x);
+            return SavingOption.Load(dbName, BinarySerializer.Instance);
         }
 
         public void Clear()

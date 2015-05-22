@@ -60,5 +60,10 @@ namespace WatchLib
             base.Visit(w);
             w.QuartzCrystal = fields["QuartzCrystal"];
         }
+
+        protected override void Visit(IPlugable w) 
+        {
+            w.SetFields(fields);
+        }
     }
 }

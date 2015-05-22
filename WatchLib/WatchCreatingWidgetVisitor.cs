@@ -79,6 +79,17 @@ namespace WatchLib
             AddWatchField(wf);
         }
 
+        protected override void Visit(IPlugable w)
+        {
+            watchType = w.GetType();
+            foreach (var f in w.GetFields())
+            {
+                if (f.fieldName.Text == "Time") continue;
+                f.fieldValue.Text = "";
+                AddWatchField(f);
+            }
+        }
+
         private void AddWatchField(WatchField wf)
         {
             wf.Top = elementY;

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public interface IWatchPlugin
+    public interface IPlugable
     {
-        string Time(); 
+        WatchCreatingControl CreatingWidget();
     }
 }
