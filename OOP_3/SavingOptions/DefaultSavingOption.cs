@@ -16,7 +16,7 @@ namespace OOP_3
             List<T> instances = new List<T>();
             using (Stream stream = File.OpenRead(path))
             {
-                instances =  serializer.Deserialize<T>(stream);
+                instances = serializer.Deserialize<T>(stream);
             }
 
             return instances;

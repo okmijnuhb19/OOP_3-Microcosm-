@@ -133,6 +133,9 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            watchComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            SavingOptionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+
         }
 
         #endregion

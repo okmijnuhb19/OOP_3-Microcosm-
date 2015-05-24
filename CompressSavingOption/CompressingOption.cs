@@ -30,7 +30,6 @@ namespace CompressSavingOption
                 {
                     MessageBox.Show("You must delete old elements");
                 }
-                
             }
 
             return instances;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonForAdapting;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WatchLib;
@@ -23,15 +25,18 @@ namespace OOP_3
         public Form1()
         {
             InitializeComponent();
-            
             PluginManager.Instance.AddAssembly(Assembly.GetAssembly(typeof(Watch)));
             PluginManager.Instance.AddAssembly(Assembly.GetExecutingAssembly());
-            SavingOptionComboBox.Text = rep.SavingOption.GetType().Name;
+            PluginManager.Instance.AddAdapter(typeof(SaveOption<>), typeof(Adapter.OptionAdapter<>));
+
+            SetDefaultSaveOption();
             UpdateComboBoxes();
         }
 
         private void DrawWatches(IEnumerable<Watch> watches)
         {
+            if (watches == null) return;
+
             int x = 10;
             int y = 10;
             int marginX = 0;
@@ -75,10 +80,13 @@ namespace OOP_3
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            Watch w = watchFactory.FactoryMethod(watchComboBox.Text);
-            var wi = new WatchInitializingForm(w);
+            if (watchComboBox.Text != String.Empty)
+            {
+                Watch w = watchFactory.FactoryMethod(watchComboBox.Text);
+                var wi = new WatchInitializingForm(w);
 
-            wi.WatchInitializingEnded += onWatchInitializingEnded;
+                wi.WatchInitializingEnded += onWatchInitializingEnded;
+            }
         }
 
         private void onWatchInitializingEnded(object sender, WatchInitEndedEventArgs e)
@@ -116,8 +124,8 @@ namespace OOP_3
         {
             watchComboBox.SetClasses(watchFactory.GetTypes());
 
-            Type t = typeof(ISavingOption<>);
-            string[] types = PluginManager.Instance.GetTypesNamesByInterface(t);
+            string[] types = PluginManager.Instance.GetSavingOptionTypesNames<Watch>();
+            types = types.Select(x => x.Substring(0, x.Length - 2)).ToArray();
             SavingOptionComboBox.SetClasses(types);
         }
 
@@ -128,11 +136,19 @@ namespace OOP_3
 
         private void SavingOptionComboBox_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string type = SavingOptionComboBox.Text;
+            string type = SavingOptionComboBox.Text + "`1";
             if (type != String.Empty)
             {
-                rep.SavingOption = (ISavingOption<Watch>)PluginManager.Instance.CreateGenericInstance<Watch>(type);
+                ISavingOption<Watch> so = PluginManager.Instance.Adaptize<Watch>(type);
+                rep.SavingOption = so;
             }
+        }
+
+
+        private void SetDefaultSaveOption()
+        {
+            string name = rep.SavingOption.GetType().Name;
+            SavingOptionComboBox.Text = name.Substring(0, name.Length - 2);
         }
     }
 }

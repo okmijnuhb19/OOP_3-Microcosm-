@@ -50,7 +50,7 @@ namespace WatchLib
             base.Visit(w);
             watchType = "MechanicalWatches";
 
-            WatchField wf = new WatchField("EnetgySource", w.EnergySource);
+            WatchField wf = new WatchField("EnergySource", w.EnergySource);
             AddWatchField(wf);
             wf = new WatchField("OscillatorySystem", w.OscillatorySystem);
             AddWatchField(wf);

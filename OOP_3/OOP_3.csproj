@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OOP_3</RootNamespace>
     <AssemblyName>OOP_3</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapter\OptionAdapter.cs" />
+    <Compile Include="Adapter\SerializeAdapter.cs" />
     <Compile Include="PluginManager.cs" />
     <Compile Include="Serializer\BinarySerializer.cs" />
     <Compile Include="SavingOptions\DefaultSavingOption.cs" />
@@ -77,6 +80,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +96,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CommonForAdapting\CommonForAdapting.csproj">
+      <Project>{a88f281b-dce4-481e-8c0f-58d0deed833e}</Project>
+      <Name>CommonForAdapting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WatchLib\WatchLib.csproj">
       <Project>{7447453c-ce75-4e3f-a832-e943e811454d}</Project>
       <Name>WatchLib</Name>

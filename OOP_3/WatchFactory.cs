@@ -15,7 +15,7 @@ namespace OOP_3
 
         public Watch FactoryMethod(string type)
         {
-            string[] types = PluginManager.Instance.GetTypesNames<Watch>();
+            string[] types = PluginManager.Instance.GetAssignableTypesNames(typeof(Watch));
             if(!types.Contains(type))
             {
                 throw new Exception("WatchFactory: invalid type");
@@ -27,7 +27,7 @@ namespace OOP_3
 
         public string[] GetTypes()
         {
-            return PluginManager.Instance.GetTypesNames<Watch>();
+            return PluginManager.Instance.GetAssignableTypesNames(typeof(Watch));
         }
     }
 }

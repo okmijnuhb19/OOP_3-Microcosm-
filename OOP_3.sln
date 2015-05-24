@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireWatch_1", "FireWatch_1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompressSavingOption", "CompressSavingOption\CompressSavingOption.csproj", "{2C9C2AAC-E0F7-40F5-942A-C9B9FC0AC660}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashOption", "HashOption\HashOption.csproj", "{56DFDEF7-6B11-4DC0-B9D7-5AE85C3D9ADD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonForAdapting", "CommonForAdapting\CommonForAdapting.csproj", "{A88F281B-DCE4-481E-8C0F-58D0DEED833E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{2C9C2AAC-E0F7-40F5-942A-C9B9FC0AC660}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C9C2AAC-E0F7-40F5-942A-C9B9FC0AC660}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C9C2AAC-E0F7-40F5-942A-C9B9FC0AC660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56DFDEF7-6B11-4DC0-B9D7-5AE85C3D9ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56DFDEF7-6B11-4DC0-B9D7-5AE85C3D9ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56DFDEF7-6B11-4DC0-B9D7-5AE85C3D9ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56DFDEF7-6B11-4DC0-B9D7-5AE85C3D9ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88F281B-DCE4-481E-8C0F-58D0DEED833E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88F281B-DCE4-481E-8C0F-58D0DEED833E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88F281B-DCE4-481E-8C0F-58D0DEED833E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88F281B-DCE4-481E-8C0F-58D0DEED833E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

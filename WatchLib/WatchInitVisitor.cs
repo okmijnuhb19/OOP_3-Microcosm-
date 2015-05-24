@@ -39,7 +39,7 @@ namespace WatchLib
         protected override void Visit(MechanicalWatches w)
         {
             base.Visit(w);
-            w.EnergySource = fields["EnetgySource"];
+            w.EnergySource = fields["EnergySource"];
             w.OscillatorySystem = fields["OscillatorySystem"];
 
         }
