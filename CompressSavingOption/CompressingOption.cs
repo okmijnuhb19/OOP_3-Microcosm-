@@ -37,17 +37,17 @@ namespace CompressSavingOption
 
         public void Save(string path, object obj, ISerializer serializer)
         {
-            List<T> instences = this.Load(path, serializer);
-            if (instences == null)
+            List<T> instances = this.Load(path, serializer);
+            if (instances == null)
             {
-                instences = new List<T>();
+                instances = new List<T>();
             }
-            instences.Add((T)obj);
+            instances.Add((T)obj);
 
             using (Stream s = new FileStream(path, FileMode.Create))
             using (Stream ds = new DeflateStream(s, CompressionMode.Compress))
             {
-                byte[] buff = serializer.Serialize(instences).ToArray();
+                byte[] buff = serializer.Serialize(instances).ToArray();
                 ds.Write(buff, 0, buff.Length);
             }
         }
